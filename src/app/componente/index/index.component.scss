@@ -1,0 +1,27 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+/*En todo o index*/
+.index {margin: 1em 25%;}
+
+/*Foto do index*/
+.logo-index img {width:50%; height: auto; display: block; margin:5% 20%;}
+
+/*Formulario*/
+.formulario-index {
+    color: $letraCor;
+    label {text-align: end;}
+    label, input {width:100%;}
+    form {margin: auto;}
+    .boton-index {width:100%; padding: .8em; border: 0px; background-color: $letraCor; color: white;}
+    .bgVermello {background-color: $letraVermella;}
+    .centrar {justify-content: center;}
+}
+
+@media (max-width: 576px) {
+    .formulario-index {
+        label, input {width:100%; text-align: center;}
+    }
+}

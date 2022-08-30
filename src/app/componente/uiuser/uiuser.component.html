@@ -1,0 +1,42 @@
+
+
+<div class="row">
+<div class="arribaUsuario col-12">
+    <div class="row">
+    <div class="nomeUsuario col-12 col-sm-4 dereita">
+        <h1>{{ 'nomeUsuario' | translate }} {{usuario.alias}}</h1>
+    </div>
+    <div class="puntuacionUsuario col-12 col-sm-4 dereita">
+        <h3>{{ 'puntuacionUsuario' | translate }} {{usuario.puntuacion}}</h3>
+    </div>
+    <div class="cerrarUsuario col-12 col-sm-4 dereita">
+        <button type="submit" (click)="pecheSession();">{{ 'cerrarSesion' | translate }}</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="nivelesUsuario">
+<div class="row">
+
+    <div class="nivel col-12 col-md-4" *ngFor="let foto of arrayFotos; let i=index">
+        <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let mon of foto">
+              <div class="picsum-img-wrapper">
+                <img src="./assets/monuments/monument{{mon}}.jpg" alt="image" (click)="verNivel(i+1);">
+              </div>
+              <div class="carousel-caption">
+                <h3>{{ 'nivel' | translate }} {{i+1}}</h3>
+              </div>
+            </ng-template>
+          </ngb-carousel>
+
+        <div class="barra">
+            <!--Barra de progreso-->
+            PROGRESO
+        </div>
+    </div>
+
+</div>
+</div>
+

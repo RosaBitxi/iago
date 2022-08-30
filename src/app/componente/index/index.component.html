@@ -1,0 +1,40 @@
+<div class="index">
+    <!--Logo de empresa-->
+    <div class="logo-index">
+        <img src="./assets/logotipo1.svg" alt="logotipo IaGo">
+    </div>
+
+    <!--Formulario de acceso-->
+    <form class="formulario-index" (ngSubmit)="entrarUsuario();">
+        <div class="row">
+            <div class="col-12 col-sm-4 my-1">
+                <label>{{ 'form11' | translate }}</label>
+            </div>
+            <div class="col-12 col-sm-4 my-1">
+                <input type="text" name="alias" [(ngModel)]="usuarioModel.alias" required="required">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 col-sm-4 my-1">
+                <label>{{ 'form12' | translate }}</label>
+            </div>
+            <div class="col-12 col-sm-4 my-1">
+                <input type="password" name="passwd" [(ngModel)]="usuarioModel.passwd" required="required">
+            </div>
+        </div>
+
+        <div class="row centrar">
+            <div class="col-12 col-sm-5 my-1">
+                <button type="submit" class="boton-index">{{ 'form13' | translate }}</button>
+            </div>
+            <div class="col-12 col-sm-5 my-1">
+                <input type="submit" value="{{ 'form14' | translate }}" class="boton-index bgVermello" (click)="rexistrarUsuario();">
+            </div>
+        </div>
+        
+    </form>
+</div>
+
+
+

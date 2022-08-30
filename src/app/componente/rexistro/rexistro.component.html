@@ -1,0 +1,76 @@
+<div class="formularioRexistro">
+    <form  #formNovoUsuario="ngForm" (ngSubmit)="comprobarUsuario(); comprobarContrasinal(); submitUsuario();" method="post" >
+
+<div class="row">
+    <div class="col-12">
+    <div class="row">
+        <div class="col-12 col-sm-4 my-1">
+            <label>{{ 'rexistro1' | translate }} **</label>
+        </div>
+        <div class="col-12 col-sm-4 my-1">
+            <input required type="text" name="alias" #alias="ngModel" [(ngModel)]="usuarioModel.alias">
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-sm-4 my-1">
+                <label>{{ 'rexistro2' | translate }}</label>
+            </div>
+            <div class="col-12 col-sm-4 my-1">                   
+                <input type="text" name="email" #email="ngModel" [(ngModel)]="usuarioModel.email">
+            </div>
+        </div>
+    </div>  
+</div>
+
+<div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12 col-sm-4 my-1">
+                    <label>{{ 'rexistro3' | translate }} **</label>
+                </div>
+                <div class="col-12 col-sm-4 my-1">                   
+                    <input required type="password" name="passwd" #passwd="ngModel" [(ngModel)]="usuarioModel.passwd">
+                </div>
+            </div>
+         </div>  
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-sm-4 my-1">
+                <label>{{ 'rexistro4' | translate }} **</label>
+            </div>
+            <div class="col-12 col-sm-4 my-1">                   
+                <input required type="password" name="passwd" #passwd="ngModel" [(ngModel)]="usuarioModel.doblePasswd">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-sm-4 my-1">
+                <label>{{ 'rexistro5' | translate }}</label>
+            </div>
+            <div class="col-12 col-sm-4 my-1">                   
+                <input type="text" name="animal" #animal="ngModel" [(ngModel)]="usuarioModel.animal">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row botonCentro">
+    <div class="col-3">
+        <button type="submit">{{ 'rexistro6' | translate }}</button>
+    </div>
+</div>
+
+     </form>
+</div>       

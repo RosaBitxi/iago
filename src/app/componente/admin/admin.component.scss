@@ -1,0 +1,13 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+
+.pecheSesion {
+    margin:.5em;
+    .alinearDereita {justify-content: end;}
+    button  {background-color: $letraCor; color: white; border: 0px; padding:.8em;}
+}
+
+.administrador {
+    input {background-color: $letraCor; color: white; border: 0px; padding:.8em; margin:.5em; width:100%;}
+}

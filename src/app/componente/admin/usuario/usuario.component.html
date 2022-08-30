@@ -1,0 +1,22 @@
+<div class="usuario">
+    <div class="row">
+        <div class="col-12 col-sm-4">
+        
+                <form>
+                    <input type="button" (click)="verElimUs();" class="button" value="{{ 'admin4' | translate }}">
+    
+                    <input type="button" (click)="mostrarSelector();" class="button volver" value="{{ 'selector' | translate }}">
+                </form>
+        
+        </div>
+        
+        
+        <div class="col-12 col-sm-8" *ngIf="visibilidadeEliminarUs == true">
+            <!--Abrese o formulario segun o que se vai a facer
+            ELIMINAR USUARIO-->
+            <deleteUsuario></deleteUsuario>
+        </div>
+        
+    </div>
+    
+</div>

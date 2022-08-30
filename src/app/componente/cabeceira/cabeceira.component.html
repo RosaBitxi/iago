@@ -1,0 +1,33 @@
+<header>
+    <!--Selector de lingua-->
+    <div class="row">
+        <div class="linguas col-12">
+            <button [ngClass]="{'active': activeLang == 'English'}" (click)="switchLang('English')">
+                English
+            </button>
+            <button [ngClass]="{'active': activeLang == 'Castellano'}" (click)="switchLang('Castellano')">
+                Castellano
+            </button>
+            <button [ngClass]="{'active': activeLang == 'Galego'}" (click)="switchLang('Galego')">
+                Galego
+            </button>
+        </div>
+    </div>
+    
+
+    <!--Logo-->
+    <div class="logo">
+        <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <img alt="imgotipo IaGo" src="./assets/imagotipo.png">
+        </a>
+    </div>
+
+    <!--Menu-->
+    <div class="menu-inicio">
+        <ul>
+            <li (click)="verSomos();">{{ 'menu1' | translate }}</li>
+            <li (click)="verFacemos();">{{ 'menu2' | translate }}</li>
+            <li (click)="verContactanos();">{{ 'menu3' | translate }}</li>
+        </ul>
+    </div>
+</header>

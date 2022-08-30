@@ -1,0 +1,76 @@
+<!--Abrese o formulario segun o que se vai a facer
+    ENGADIR NIVEL-->
+    <form class="formularioAberto" #formNivel="ngForm" (ngSubmit)="submitNivel();">
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir1' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <input required type="text" name="nome" #nome="ngModel" [(ngModel)]="nivelModel.nome">
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'dificultade' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="radio" name="dificultade" value="fac" class="seguido dereita"  #dificultade="ngModel" [(ngModel)]="nivelModel.dificultade">
+                        <label class="seguido esquerda">{{ 'dificultade1' | translate }}</label>
+                    </div>
+
+                    <div class="col-4">
+                        <input type="radio" name="dificultade" value="med" class="seguido dereita"  #dificultade="ngModel" [(ngModel)]="nivelModel.dificultade">
+                        <label class="seguido">{{ 'dificultade2' | translate }}</label>
+                    </div>
+
+                    <div class="col-4">
+                        <input type="radio" name="dificultade" value="dif" class="seguido dereita"  #dificultade="ngModel" [(ngModel)]="nivelModel.dificultade">
+                        <label class="seguido">{{ 'dificultade3' | translate }}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'mon1' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <select required name="mon1" [(ngModel)]="nivelModel.mon1">
+                    <option *ngFor="let monumento of arrayMonumentos" [ngValue]="monumento.id">{{monumento.nome}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'mon2' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <select required name="mon2" [(ngModel)]="nivelModel.mon2">
+                    <option *ngFor="let monumento of arrayMonumentos" [ngValue]="monumento.id">{{monumento.nome}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'mon3' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <select required name="mon3" [(ngModel)]="nivelModel.mon3">
+                    <option *ngFor="let monumento of arrayMonumentos"  [ngValue]="monumento.id">{{monumento.nome}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row centrar">
+            <div class="col-12">
+                <button type="submit">{{ 'adminEngadir6' | translate }}</button>
+            </div>
+        </div>
+        
+    </form>

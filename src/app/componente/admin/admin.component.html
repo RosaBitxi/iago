@@ -1,0 +1,43 @@
+<div class="pecheSesion">
+    <div class="row alinearDereita">
+    <div class="cerrarUsuario col-3">
+        <button type="submit" (click)="pecheSession();">{{ 'cerrarSesion' | translate }}</button>
+    </div>
+</div>
+
+<div class="administrador">
+<!--Chámase a compoñente segun se modifica monumento / nivel / usuario-->
+
+<div class="row" *ngIf="selector == true">
+    <div class="col-12 col-md-4">
+        <!--Para modificar monumento-->
+        <input type="submit" value="{{ 'monumento' | translate }}" (click)="mostrarMonumento();">
+    </div>
+    <div class="col-12 col-md-4">
+        <!--Para modificar nivel-->
+        <input type="submit" value="{{ 'nivel' | translate }}" (click)="mostrarNivel();">
+    </div>
+    <div class="col-12 col-md-4">
+        <!--Para modificar usuario-->
+        <input type="submit" value="{{ 'usuario' | translate }}" (click)="mostrarUsuario();">
+    </div>
+</div>
+
+<div>
+    <!--Vese a compoñente segun se active-->
+<div class="row">
+    <div class="col-12" *ngIf="monumento == true">
+        <app-monumento></app-monumento>
+    </div>
+    <div class="col-12" *ngIf="nivel == true">
+        <app-nivel-admin></app-nivel-admin>
+    </div>
+    <div class="col-12" *ngIf="usuario == true">
+        <app-usuario></app-usuario>
+    </div>
+</div>
+</div>
+
+
+
+</div>

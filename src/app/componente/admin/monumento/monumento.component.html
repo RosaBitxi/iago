@@ -1,0 +1,37 @@
+<div class="monumento">
+<div class="row">
+    <div class="col-12 col-sm-4">
+    
+            <form>
+                <input type="button" (click)="verEnagdirMon();" class="button" value="{{ 'admin1' | translate }}">
+    
+                <input type="button" (click)="verModifMon();" class="button" value="{{ 'admin2' | translate }}">
+    
+                <input type="button" (click)="verElimMon();" class="button" value="{{ 'admin3' | translate }}">
+
+                <input type="button" (click)="mostrarSelector();" class="button volver" value="{{ 'selector' | translate }}">
+            </form>
+    
+    </div>
+    
+    <div class="col-12 col-sm-8" *ngIf="visibilidadeEngadir == true">
+        <!--Abrese o formulario segun o que se vai a facer
+        ENGADIR MONUMENTO-->
+        <createMonumento></createMonumento>
+    </div>
+    
+    <div class="col-12 col-sm-8" *ngIf="visibilidadeModificar == true">
+        <!--Abrese o formulario segun o que se vai a facer
+        MODIFICAR MONUMENTO-->
+        <modifyMonumento></modifyMonumento>
+    </div>
+    
+    <div class="col-12 col-sm-8" *ngIf="visibilidadeEliminarMon == true">
+        <!--Abrese o formulario segun o que se vai a facer
+        ELIMINAR MONUMENTO-->
+        <deleteMonumento></deleteMonumento>
+    </div>
+    
+</div>
+
+</div>

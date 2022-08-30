@@ -1,0 +1,56 @@
+<!--Abrese o formulario segun o que se vai a facer
+    ENGADIR MONUMENTO-->
+    <form class="formularioAberto" #formMonumento="ngForm" (ngSubmit)="submitMonumento();" enctype="multipart/form-data" method="post">
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir1' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <input required="required" type="text" name="nome" #nome="ngModel" [(ngModel)]="monumentoModel.nome">
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir2' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <textarea required="required" name="novoDescripMonumento" [(ngModel)]="monumentoModel.descripcion"></textarea>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir5' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <input disabled type="file" name="novoImaxeMonumento" [(ngModel)]="monumentoModel.imaxe">
+                <!--(change)="enviarImaxe($event);"-->
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir3' | translate }}:</label>
+            </div>
+            <div class="col-8">
+                <input type="text" name="novoCoordMonumento" [(ngModel)]="monumentoModel.coord">
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir4' | translate }}:</label>
+            </div>
+            <div class="col-8">
+                <textarea name="novoVisionMonumento" [(ngModel)]="monumentoModel.vision"></textarea>
+            </div>
+        </div>
+
+        <div class="row centrar">
+            <div class="col-12">
+                <button type="submit">{{ 'adminEngadir6' | translate }}</button>
+            </div>
+        </div>
+        
+    </form>

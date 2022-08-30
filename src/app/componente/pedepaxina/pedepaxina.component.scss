@@ -1,0 +1,28 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+/*Footer*/
+footer {background-color:$fondoMenuCor; padding:1% 0px;}
+.pedepaxina {align-items: baseline;}
+
+/*politicas*/
+.politicas {display:flex; justify-content: center;
+    li {list-style:none; margin: .25em .5em;}
+    a {text-decoration: none; color: $letraCor;}
+    a:hover {color: $letraVermella;}
+}
+
+/*colaboradores*/
+.colaboradores {text-align: center;
+    h3 {font-size: 125%; font-weight: normal;}
+    img {width:22%; height:auto; margin: 0px 1%;}
+}
+.conecenos {text-align: center;
+    h3 {font-size: 125%; font-weight: normal;}
+    .rrss {display:flex; flex-wrap:wrap; justify-content: center;
+        a {width:20%; margin: 1%;}
+        img {width:99%; height:auto;}
+    }
+}

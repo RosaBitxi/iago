@@ -1,0 +1,23 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+header {background-color: $fondoMenuCor; padding: 0px 5%;}
+
+/*Para as linguas*/
+.linguas {width:100%; margin-right: 0em; margin-left:auto;
+    button {flex-wrap: wrap; justify-content:flex-end; margin:0px; background:transparent; border: 0px; color: $letraCor; float:right; padding: .5em 0.25em;}
+}
+
+/*Logo*/
+.logo {margin: 0px; display:inline-block; width:auto;
+    img {width: 40%; height:auto;}
+}
+
+/*menu superior*/
+.menu-inicio {display: inline-block; margin-right: 0px; width: auto;
+    ul {display: flex; flex-wrap: wrap;}
+    li {list-style: none; margin: .25em .5em; color: $letraCor}
+    li:hover {color: $letraVermella;}
+}

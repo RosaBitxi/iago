@@ -1,0 +1,25 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+.texto {
+    color: $letraCor;
+    h1 {text-align: center; color: $letraVermella;}
+}
+.contacto {
+    width:100%;
+    label, input, textarea {width:100%;}
+    label {text-align: right;}
+    button {width:100%; border:0px; color:white; padding:.8em; margin:.5em;}
+    .enviar {background-color: $letraCor;}
+    .reset {background-color: $letraVermella;}
+    .centrar {justify-content: center;}
+    fieldset {width:100%; background-color:whitesmoke;}
+}
+
+@media (max-width: 576px) {
+    .contacto {
+        label, input {width:100%; text-align: center;}
+    }
+}

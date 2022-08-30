@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="arribaUsuario col-12">
+        <div class="row">
+        <div class="nomeUsuario col-md-6 col-4">
+            <p>{{ 'nomeUsuario' | translate }} ____</p>
+        </div>
+        <div class="puntuacionUsuario col-md-6 col-4">
+            <p>{{ 'puntuacionUsuario' | translate }} ____</p>
+        </div>
+        <div class="cerrarUsuario col-md-12 col-4">
+            <button type="submit" (click)="pecheSession();">{{ 'cerrarSesion' | translate }}</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="row etapaNivel" *ngFor="let monumento of listaMonumentos">
+    <div class="col-12 col-md-4">
+    <div class="row">
+        <div class="fotoNivel col-6">
+        <img [src]="monumento.src" alt="Foto do monumento">
+        </div>
+    </div>
+    </div>
+    <div class="textoNivel col-12 col-md-4">
+        ___ {{ monumento.descrip }}
+    </div>
+    <div class="botonNivel col-12 col-md-4">
+        <button>Enviar</button>
+    </div>
+</div>
+
+<input type="button" (click)="volver();" class="button volver col-12 m-3" value="{{ 'selector' | translate }}">

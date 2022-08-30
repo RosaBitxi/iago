@@ -1,0 +1,9 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+.nivel {
+    .button {background-color: $letraCor; color: white; border: 0px; padding:.8em; margin:.5em; width:100%;}
+    .volver {background-color: $letraVermella;}
+}

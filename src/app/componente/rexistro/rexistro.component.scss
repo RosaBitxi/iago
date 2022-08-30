@@ -1,0 +1,18 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+
+.formularioRexistro {
+    color: $letraCor;
+    label {text-align: end;}
+    label, input {width:100%;}
+    form {margin: auto;}
+    button {width:auto; padding: .8em; border: 0px; background-color: $letraCor; color: white;}
+    .botonCentro {justify-content:center;}
+}
+
+@media (max-width: 576px) {
+    .formularioRexistro {
+        label, input {width:100%; text-align: center;}
+    }
+}

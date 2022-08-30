@@ -1,0 +1,38 @@
+<div class="nivel">
+    <div class="row">
+        <div class="col-12 col-sm-4">
+        
+                <form>
+                    <input type="button" (click)="verEnagdirNiv();" class="button" value="{{ 'admin21' | translate }}">
+        
+                    <input type="button" (click)="verModifNiv();" class="button" value="{{ 'admin22' | translate }}">
+        
+                    <input type="button" (click)="verElimNiv();" class="button" value="{{ 'admin23' | translate }}">
+    
+                    <input type="button" (click)="mostrarSelector();" class="button volver" value="{{ 'selector' | translate }}">
+                </form>
+        
+        </div>
+        
+        <div class="col-12 col-sm-8" *ngIf="visibilidadeEngadir == true">
+            <!--Abrese o formulario segun o que se vai a facer
+            ENGADIR NIVEL-->
+            <createNivel></createNivel>
+        </div>
+        
+        <div class="col-12 col-sm-8" *ngIf="visibilidadeModificar == true">
+            <!--Abrese o formulario segun o que se vai a facer
+            MODIFICAR NIVEL-->
+            <modifyNivel></modifyNivel>
+        </div>
+        
+        <div class="col-12 col-sm-8" *ngIf="visibilidadeEliminarMon == true">
+            <!--Abrese o formulario segun o que se vai a facer
+            ELIMINAR NIVEL-->
+            <deleteNivel></deleteNivel>
+        </div>
+        
+        
+        </div>
+    
+        </div>

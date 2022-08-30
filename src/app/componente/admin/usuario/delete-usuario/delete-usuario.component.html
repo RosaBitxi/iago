@@ -1,0 +1,20 @@
+<!--Abrese o formulario segun o que se vai a facer
+    BORRAR USUARIO-->
+    <form class="formularioAberto" (ngSubmit)="deleteUs();">
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir1' | translate }}:</label>
+            </div>
+            <div class="col-8">
+                <select name="usuarioTarget" [(ngModel)]="usuarioTarget">
+                    <option *ngFor="let usuario of arrayUsuarios" [ngValue]="usuario"> {{usuario.alias}}</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="row centrar">
+            <div class="col-12">
+                <button type="submit">{{ 'adminElim1' | translate }}</button>
+            </div>
+        </div>
+    </form>

@@ -1,0 +1,9 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+.texto {
+    color: $letraCor;
+    h1 {text-align: center; color: $letraVermella;}
+}

@@ -1,0 +1,34 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+.arribaUsuario {
+    color:$letraCor; margin-top: 1em;
+    .dereita {text-align: end;}
+    h1 {color: $letraVermella;}
+    button {background-color: $letraCor; color:white; border:0px; padding:.8em; text-align: center;}
+}
+
+
+.nivelesUsuario {margin:3em;
+    .barra {background-color: $letraCor; width:80%; height:auto; margin:2em; text-align: center; vertical-align: middle; color:white; padding:.8em;}
+}
+
+.nivel{
+    padding:1em;
+    img {height:600px; width:100%;}
+}
+
+@media (max-width: 992px) {
+    .nivel {
+        img {height:400px;}
+    }
+}
+
+@media (max-width: 768px) {
+    .nivel {
+        padding-left:10%;
+        img {height:auto;}
+    }
+}

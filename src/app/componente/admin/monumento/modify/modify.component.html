@@ -1,0 +1,58 @@
+<!--Abrese o formulario segun o que se vai a facer
+    MODIFICAR MONUMENTO-->
+    <form class="formularioAberto" #formMonumento="ngForm" (ngSubmit)="updateMonumento();">
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir1' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <select name="monumentoTarget" [(ngModel)]="monumentoTarget" required="required">
+                    <option *ngFor="let monumento of arrayMonumentos" [ngValue]="monumento">{{monumento.nome}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir2' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <textarea required="required" name="descripcion" #descripcion="ngModel" [(ngModel)]="monumentoTarget.descripcion"></textarea>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir5' | translate }}: **</label>
+            </div>
+            <div class="col-8">
+                <input disabled type="file" name="imaxe" #imaxe="ngModel" [(ngModel)]="monumentoTarget.imaxe">
+                <!--(change)="enviarImaxe($event);"-->
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir3' | translate }}:</label>
+            </div>
+            <div class="col-8">
+                <input type="text" name="coord" #coord="ngModel"  [(ngModel)]="monumentoTarget.coord">
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col-4">
+                <label>{{ 'adminEngadir4' | translate }}:</label>
+            </div>
+            <div class="col-8">
+                <textarea name="vision" #vision="ngModel" [(ngModel)]="monumentoTarget.vision"></textarea>
+            </div>
+        </div>
+
+        <div class="row centrar">
+            <div class="col-12">
+                <button type="submit">{{ 'adminEngadir6' | translate }}</button>
+            </div>
+        </div>
+        
+    </form>
