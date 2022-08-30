@@ -1,0 +1,31 @@
+/*VARIABLES*/
+$fondoMenuCor: #c0c0c0;
+$letraCor: #1A5276;
+$letraVermella: #cd6155;
+
+.nivel {
+    color:$letraCor;
+    .arribaUsuario {margin-top: 1em;
+        .dereita {text-align: end;}
+        h1 {color: $letraVermella;}
+        button {background-color: $letraCor; color:white; border:0px; padding:.8em; text-align: center;}
+    }
+    .botonNivel {
+        text-align: center;
+        button {background-color: $letraCor; border:0px; padding:.8em; color:white;}
+    }
+    .etapaNivel {margin: 1em;}
+    .volver {background-color: $letraVermella; border:0px; padding:.8em; color:white; width:100%;}
+    .datosNiveles {
+        width:100%;
+        .cuadro {background-color: whitesmoke; padding:3em;}
+        h4, h5 {text-align: center;}
+        h5 {color: $letraVermella;}
+        img {width:100%; height:auto;}
+        .centrado {align-items: center; border: 1em solid $letraVermella}
+        .dereita {text-align: end;}
+    }
+}
+
+
+

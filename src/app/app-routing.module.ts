@@ -2,7 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './componente/admin/admin.component';
 import { IndexComponent } from './componente/index/index.component';
-import { NivelComponent } from './componente/nivel/nivel.component';
+import { NivelComponent } from './componente/uiuser/nivel/nivel.component';
 import { RexistroComponent } from './componente/rexistro/rexistro.component';
 import { ContactoComponent } from './componente/texto/contacto/contacto.component';
 import { FacemosComponent } from './componente/texto/facemos/facemos.component';

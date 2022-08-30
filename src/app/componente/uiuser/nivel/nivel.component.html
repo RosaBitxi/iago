@@ -1,0 +1,82 @@
+<div class="nivel">
+
+<div class="row">
+    <div class="arribaUsuario col-12">
+        <div class="row">
+        <div class="nomeUsuario col-12 col-sm-4 dereita">
+            <h1>{{ 'nomeUsuario' | translate }} {{ usuario.alias }}</h1>
+        </div>
+        <div class="puntuacionUsuario col-12 col-sm-4 dereita">
+            <h3>{{ 'puntuacionUsuario' | translate }} {{ usuario.puntuacion }}</h3>
+        </div>
+        <div class="cerrarUsuario col-12 col-sm-4 dereita">
+            <button type="submit" (click)="pecheSession();">{{ 'cerrarSesion' | translate }}</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="datosNiveles">
+    <div class="cuadro my-3">
+        <div class="row">
+            <div class="col-12">
+                <h4>{{ nivel.nome }}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5>{{ 'dificultade' | translate }}: {{dificultade(nivel.dificultade)}}</h5>
+            </div>
+        </div>
+    </div>
+    
+    <!--Caracteristicas de monumento1-->
+    <div class="row my-3 centrado  mx-5">
+        <div class="col-12 col-sm-2">
+            <img src="/assets/monuments/{{monumento1.imaxe}}" alt="{{ monumento1.nome }}">
+        </div>
+        <div class="col-12 col-sm-6">
+            <h4>{{ monumento1.nome }}</h4>
+            <p>{{monumento1.descripcion}}</p>
+        </div>
+        <div class="col-12 col-sm-2">
+            <input disabled="disabled" type="file">
+        </div>
+    </div>
+    <!--Caracteristicas de monumento2-->
+    <div class="row my-3 centrado mx-5">
+        <div class="col-12 col-sm-2">
+            <img src="/assets/monuments/{{monumento2.imaxe}}" alt="{{ monumento2.nome }}">
+        </div>
+        <div class="col-12 col-sm-6">
+            <h4>{{ monumento2.nome }}</h4>
+            <p>{{monumento2.descripcion}}</p>
+        </div>
+        <div class="col-12 col-sm-2">
+            <input disabled="disabled" type="file">
+        </div>
+    </div>
+    <!--Caracteristicas de monumento3-->
+    <div class="row my-3 centrado mx-5">
+        <div class="col-12 col-sm-2">
+            <img src="/assets/monuments/{{monumento3.imaxe}}" alt="{{ monumento3.nome }}">
+        </div>
+        <div class="col-12 col-sm-6">
+            <h4>{{ monumento3.nome }}</h4>
+            <p>{{monumento3.descripcion}}</p>
+        </div>
+        <div class="col-12 col-sm-2">
+            <input disabled="disabled" type="file">
+        </div>
+    </div>
+
+</div>
+
+    <!--Boton de volver-->
+    <div class="row">
+        <div class="col-12 my-3">
+            <input type="button" (click)="volver();" class="button volver" value="{{ 'selector' | translate }}">
+        </div>
+    </div>
+
+</div>

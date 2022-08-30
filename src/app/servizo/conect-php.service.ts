@@ -107,4 +107,6 @@ export class ConectPHPService {
     return this.http.get<any>(`${this.baseUrl}/server/xogadorNivelGet.php?id=${id}`);
   }
 
+  
+
 }

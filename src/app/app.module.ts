@@ -16,7 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UIUserComponent } from './componente/uiuser/uiuser.component';
-import { NivelComponent } from './componente/nivel/nivel.component';
+import { NivelComponent } from './componente/uiuser/nivel/nivel.component';
 import { RexistroComponent } from './componente/rexistro/rexistro.component';
 import { AdminComponent } from './componente/admin/admin.component';
 import { FormsModule, NgForm } from '@angular/forms';

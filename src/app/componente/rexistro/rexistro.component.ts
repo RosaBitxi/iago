@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { Usuario } from 'src/app/clase/Usuario';
 import { ConectPHPService } from 'src/app/servizo/conect-php.service';
+import { SessionStorageService } from 'src/app/servizo/session-storage.service';
 
 @Component({
   selector: 'app-rexistro',
@@ -10,7 +11,7 @@ import { ConectPHPService } from 'src/app/servizo/conect-php.service';
 })
 export class RexistroComponent implements OnInit {
 
-  constructor(private phpService: ConectPHPService, private router: Router) { }
+  constructor(private phpService: ConectPHPService, private router: Router, private storage: SessionStorageService) { }
 
   ngOnInit(): void {
   }
@@ -29,40 +30,38 @@ export class RexistroComponent implements OnInit {
 
   public arrayUsuarios: any[];
 
-  comprobarUsuario() {
-    //comproba que non existe ese alias
-    this.phpService.getUsuarios().subscribe(
-      (datos) => {this.arrayUsuarios=datos}
-    );
-    for(let i=0; i< this.arrayUsuarios.length; i++) {
-      if(this.usuarioModel.alias === this.arrayUsuarios[i].alias) {
-        this.usuarioIgual = true;
-        break;
-      } else {
-        this.usuarioIgual = false;
-      }
-    }
-  }
 
   submitUsuario(): void{
     //Comprobase que os contrasinais foron o mesmo
     if (!this.contrasinalIgual) {
       //para que saia un ou outro erro
       window.alert('Not OK: passwd');
-    } else if(this.usuarioIgual) {
-      //INCORRECTO. Os alias son iguais
-      window.alert('Not OK: alias');
+
     } else {
       if(this.phpService.addUsuario(this.usuarioModel).subscribe()) {
-        //CORRECTO
-        window.alert('OK');
         //para que acceda ao xogo
-        this.router.navigate(['/nivel']);
+        window.alert('OK: Valídate');
+        this.router.navigate(['']);
       } else {
         //INCORRECTO: non se inscribeu na bbdd
         window.alert('Not OK: BBDD');
       }
     }
   }
+
+  /*obterIDBBDD(): string {
+    let saida='1'; //por defecto
+    this.phpService.getUsuarios().subscribe(
+      (datos) => {
+      datos.array.forEach((element:any) => {
+          if(this.usuarioModel.alias === element.alias) {
+            saida = element.id;
+          }
+        });
+      }
+    );
+    return saida;
+  }*/
+
 
 }

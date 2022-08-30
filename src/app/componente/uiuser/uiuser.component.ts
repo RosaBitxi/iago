@@ -34,10 +34,6 @@ export class UIUserComponent implements OnInit {
     //obter as imaxes de cada nivel
     let id = this.ruta.snapshot.paramMap.get('id');
     this.obterIDNivel(id);
-
-    console.log(this.arrayNiveles);
-
-
   }
 
   private saberUsuario() {
@@ -47,11 +43,19 @@ export class UIUserComponent implements OnInit {
       //se é o admin, que vaia ao seu panel de control
       this.router.navigate(['/admin']);
 
-    } else {
+    } /*else {
       this.phpService.getUsuario(id).subscribe(
         datos => {this.usuario = datos[0],
         this.eUsuario(datos[0].id)}        
       );
+    }*/
+    if(id === this.storage.getToken()) {
+      this.phpService.getUsuario(id).subscribe(
+        datos => {this.usuario = datos[0]}       
+      );
+    } else {
+      this.pecheSession();
+      this.router.navigate(['']);
     }
   }
 
